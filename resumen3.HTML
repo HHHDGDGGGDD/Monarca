@@ -1,0 +1,120 @@
+<html>
+  <head>
+     <title>ALIMENTACION</title>
+  </head>
+ <body style="background: linear-gradient(black,orange,yellow);"></body> 
+  <font color="#000000"> 
+    <center>
+<script language="JavaScript1.2">
+
+/*
+Nudging text by Matthias (info@freejavascripts.f2s.com)
+Modified by Dynamic Drive to function in NS6
+For this script and more, visit http://www.dynamicdrive.com
+*/
+        //configure message
+message="ALIMENTACIÓN DE LA MARIPOSA MONARCA"
+//animate text in NS6? (0 will turn it off)
+ns6switch=1
+
+var ns6=document.getElementById&&!document.all
+mes=new Array();
+mes[0]=-1;
+mes[1]=-4;
+mes[2]=-7;mes[3]=-10;
+mes[4]=-7;
+mes[5]=-4;
+mes[6]=-1;
+num=0;
+num2=0;
+txt="";
+function jump0(){
+if (ns6&&!ns6switch){
+jump.innerHTML=message
+return
+}
+if(message.length > 6){
+for(i=0; i != message.length;i++){
+txt=txt+"<span style='position:relative;' id='n"+i+"'>"+message.charAt(i)+"</span>"};
+jump.innerHTML=txt;
+txt="";
+jump1a()
+}
+else{
+alert("Your message is to short")
+}
+}
+
+function jump1a(){
+nfinal=(document.getElementById)? document.getElementById("n0") : document.all.n0
+nfinal.style.left=-num2;
+if(num2 != 9){
+num2=num2+3;
+setTimeout("jump1a()",50)
+}
+else{
+jump1b()
+}
+}
+
+function jump1b(){
+nfinal.style.left=-num2;
+if(num2 != 0){num2=num2-3;
+setTimeout("jump1b()",50)
+}
+else{
+jump2()
+}
+}
+
+function jump2(){
+txt="";
+for(i=0;i != message.length;i++){
+if(i+num > -1 && i+num < 7){
+txt=txt+"<span style='position:relative;top:"+mes[i+num]+"'>"+message.charAt(i)+"</span>"
+}
+else{txt=txt+"<span>"+message.charAt(i)+"</span>"}
+}
+jump.innerHTML=txt;
+txt="";
+if(num != (-message.length)){
+num--;
+setTimeout("jump2()",50)}
+else{num=0;
+setTimeout("jump0()",50)}}
+</script>
+</head>
+<body>
+
+<h2><div id="jumpx" style="color:darkorange;"></div></h2>
+<script>
+if (document.all||document.getElementById){
+jump=(document.getElementById)? document.getElementById("jumpx") : document.all.jumpx
+jump0()
+}
+else
+document.write(message)
+</script>
+
+</body>
+
+
+
+      
+    
+        <p>Al principio, cuando se trata de una simple oruga, la mariposa monarca se<br>
+        alimenta de algas pero en su etapa adulta come una gran variedad de flores con<br>
+        néctar, que le proporcionan la energía para la migración.<br>
+        La mariposa adulta bebe néctar de una variedad de flores, desenrollando y extendiendo<br> 
+        su largo tronco para sorber la comida. Cuando no está en uso, esta “lengua” flexible se enrolla.<br>
+        Durante la fase de hibernación invernal, como han acumulado suficiente grasa, no necesitan<br> 
+        comer, pero necesitan beber agua, por lo que se concentran cerca de las áreas donde pueden abastecerse.<br>
+            Esta especie se alimenta del néctar de una flor denominada “Algodoncillo” o<br>
+         “Lengua de vaca”, perteneciente al género Asclepias. Es la planta que otorga a<br>
+         la mariposa la toxicidad eficaz para alejar a los depredadores. También es<br>
+         consumida por las larvas, que almacenan los glucósidos en forma de grasa en el abdomen.<br></p>
+<img height="260" border="7" width="270" alt="" src="ali.jpg"/>
+
+</center>
+
+</html>

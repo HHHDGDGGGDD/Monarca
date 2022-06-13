@@ -1,0 +1,54 @@
+<html>
+  <head>
+     <title>MARIPOSA MONARCA</title>
+  </head>
+  <body style="background: linear-gradient(yellow,orange,darkorange);"></body>
+<body onload="doWave(0)" style="font-family: Verdana"> 
+   <font color="DARKORANGE">
+    <center>
+<script language="JavaScript">
+
+//put your text here
+var theText = "MARIPOSA MONARCA";
+
+function nextSize(i,incMethod,textLength)
+{
+if (incMethod == 1) return (72*Math.abs( Math.sin(i/(textLength/3.14))) );
+if (incMethod == 2) return (255*Math.abs( Math.cos(i/(textLength/3.14))));
+}
+
+function sizeCycle(text,method,dis)
+{
+   output = "";
+   for (i = 0; i < text.length; i++)
+   {
+      size = parseInt(nextSize(i +dis,method,text.length));
+      output += "<font style='font-size: "+ size +"pt'>" +text.substring(i,i+1)+ "</font>";
+   }
+   theDiv.innerHTML = output;
+}
+
+function doWave(n) 
+{   
+   sizeCycle(theText,1,n);
+   if (n > theText.length) {n=0}
+   setTimeout("doWave(" + (n+1) + ")", 50);
+}
+</script>
+</b></p>
+<div ID="theDiv" align="center">
+
+</div>
+<font color="000000">
+   <p>La mariposa monarca es un pequeño insecto cuya envergadura mide de 8.9 a 10.2 centímetros.<br>
+        Es fácil reconocerla por el color naranja brillante de las alas, con venas y bordes negros <br>
+        decorados por motitas blancas. El macho es más grande que la hembra, tiene las venas más<br>
+        delgadas y cuenta con una bolita negra sobre las alas traseras.<br>
+        Sus alas son de color naranja con líneas negras y es fácilmente reconocible.<br>
+        La generación de otoño posee una gran resistencia y la longevidad de hasta nueve meses,<br>
+       mientras que otras generaciones pueden vivir hasta 24 días.<br>
+       <img height="250" border="7" width="259" alt="" src="mari.jpg"/>
+
+</center>
+
+</html>

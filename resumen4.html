@@ -1,0 +1,88 @@
+<html>
+  <head>
+     <title>REPRODUCCION</title>
+  </head>
+ <body style="background: linear-gradient(yellow,orange,darkorange);"></body> 
+  <font color="#000000">
+    <center>
+      <script language="JavaScript1.2">
+
+//Neon Lights Text II by G.P.F. (gpf@beta-cc.de)
+//visit http://www.beta-cc.de
+//Visit http://www.dynamicdrive.com for this script 
+
+var message="REPRODUCCIÓN DE LA MARIPOSA MONARCA"
+var neonbasecolor="white"
+var neontextcolor="DARKORANGE"
+var neontextcolor2="DARKORANGE"
+var flashspeed=100                  // speed of flashing in milliseconds
+var flashingletters=3                  // number of letters flashing in neontextcolor
+var flashingletters2=1                 // number of letters flashing in neontextcolor2 (0 to disable)
+var flashpause=0                 // the pause between flash-cycles in milliseconds
+
+///No need to edit below this line/////
+
+var n=0
+if (document.all||document.getElementById){
+document.write('<font color="'+neonbasecolor+'">')
+for (m=0;m<message.length;m++)
+document.write('<span id="neonlight'+m+'">'+message.charAt(m)+'</span>')
+document.write('</font>')
+}
+else
+document.write(message)
+
+function crossref(number){
+var crossobj=document.all? eval("document.all.neonlight"+number) : document.getElementById("neonlight"+number)
+return crossobj
+}
+
+function neon(){
+
+//Change all letters to base color
+if (n==0){
+for (m=0;m<message.length;m++)
+crossref(m).style.color=neonbasecolor
+}
+
+//cycle through and change individual letters to neon color
+crossref(n).style.color=neontextcolor
+
+if (n>flashingletters-1) crossref(n-flashingletters).style.color=neontextcolor2 
+if (n>(flashingletters+flashingletters2)-1) crossref(n-flashingletters-flashingletters2).style.color=neonbasecolor
+
+
+if (n<message.length-1)
+n++
+else{
+n=0
+clearInterval(flashing)
+setTimeout("beginneon()",flashpause)
+return
+}
+}
+
+function beginneon(){
+if (document.all||document.getElementById)
+flashing=setInterval("neon()",flashspeed)
+}
+beginneon()
+
+
+</script><br>
+
+         <p>Esta mariposa se convirtió en el insecto nacional de los Estados Unidos. es un espécimen<br> 
+            nacido y desarrollado en América pero también está presente en Australia, Indonesia y Nueva<br>
+             Zelanda, así como en Europa ya veces también se ha observado en Italia.<br>
+            El período de apareamiento de esta especie ovípara sucede en primavera antes de migrar<br>
+          hacia los sitios de hibernación. El proceso de cortejo consta de 2 etapas: la etapa aérea<br> 
+          y la etapa terrestre. En la primera etapa el macho persigue y sujeta a la hembra. En la<br>
+          segunda, se lleva a cabo la cópula en el suelo y el macho transfiere el espermatóforo a la hembra.<br>
+         Una vez que la hembra llega al sitio de cría deposita los huevos en las plantas de algodoncillo.<br>
+         El ciclo de vida de la monarca se constituye de 4 etapas y tarda cerca de 1 mes en convertirse en mariposa.<br>
+          Dura aproximadamente 4 días en salir del huevo, permanece unas 2 semanas como oruga, es crisálida durante<br>
+          10 días y su vida como mariposa dura 9 meses, más o menos.<br></p>
+          <img height="260" border="7" width="270" alt="" src="re.jpg"/>
+           </center>
+
+</html>

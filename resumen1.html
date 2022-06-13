@@ -1,0 +1,64 @@
+<html>
+  <head>
+     <title>DISTRIBUCION</title>
+  </head>
+ <body style="background: linear-gradient(black,orange,yellow);"></body> 
+  
+ <center>
+<style>
+.Item {
+   cursor: hand;
+   font-family: verdana; 
+   font-size: 20;
+   font-style: normal;
+   background-color: darkorange;
+   color: white
+ }
+.Highlight {
+   cursor: hand; 
+   font-family: verdana;
+   font-size: 20;
+   font-style: italic;
+   background-color: black;
+   color: darkorange;
+ }
+</style>
+
+
+<div id=Rollover>
+<p align="center">
+<span class=Item>DISTRIBUCIÓN Y HÁBITAT DE LA MARIPOSA MONARCA</span> </font>
+</div>
+<script>
+function rollon() {
+  if (window.event.srcElement.className == "Item") {
+     window.event.srcElement.className = "Highlight";
+  }
+} 
+  
+Rollover.onmouseover = rollon;
+  
+function rolloff() {
+  if (window.event.srcElement.className == "Highlight") {
+     window.event.srcElement.className = "Item";
+  }
+} 
+  
+Rollover.onmouseout = rolloff;
+</script>
+<font color="black">
+<p>Con una amplia distribución, la mariposa monarca se extiende en África, Norteamérica y<br> 
+         Sudamérica, Europa occidental e islas de Oceanía. Se encuentra mayormente en países como<br>
+          Canadá, Estados Unidos y en México durante una temporada. También está presente en Hawái,<br>
+           Bermudas, islas Salomón, Nueva Caledonia, Nueva Zelanda, Nueva Guinea, Ceilán, India,<br> 
+           Australia, Azores e islas Canarias. En raras ocasiones se aventura hacia Europa.<br>
+
+        Es una especie que no tolera el frío y habita una gran variedad de climas tropicales y templados.<br>
+        La mariposa monarca se puede encontrar particularmente en áreas abiertas, praderas o campos cultivadoscon <br>
+        abundante algodoncillo. Una característica de estos insectos es que vuelan aprovechando los vientos del norte<br>
+         a una altura de casi cien metros, a diferencia de otras especies de mariposas que vuelan casi al nivel del suelo.<br></p>
+        <img height="280" border="7" width="290" alt="" src="marip.jpg"/>
+        
+        </center>
+
+</html>

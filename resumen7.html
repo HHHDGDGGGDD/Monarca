@@ -1,0 +1,120 @@
+<html>
+  <head>
+     <title>SANTUARIOS</title>
+  </head>
+ <body style="background: linear-gradient(black,orange,yellow);"></body> 
+ <style type="text/css">
+  @import url("//fonts.googleapis.com/css?family=Bungee+Shade");
+* {
+  font-family: "Bungee Shade";
+}
+
+body {
+  background-color: #000000;
+  color: #000000;
+}
+
+h1 {
+  color: #FF8C00;
+  margin-top: 100px;
+  font-size: 50px;
+  text-align: center;
+}
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+</style>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1 id="messageLabel">Hello World! || I'm Alex</h1>
+<!-- partial -->
+  <SCRIPT LANGUAGE="JavaScript">
+    var message = "SANTUARIOS DE LA MARIPOSA MONARCA";
+var msgCount = 0;
+var blinkCount = 0;
+var blinkFlg = 0;
+var timer1, timer2;
+var messageLabel = document.getElementById("messageLabel");
+
+function textFunc() {
+   messageLabel.innerHTML = message.substring(0, msgCount);
+   
+   if (msgCount == message.length) {
+      // Stop Timer
+      clearInterval(timer1);
+      
+      // Start blinking animation!
+      timer2 = setInterval("blinkFunc()", 200);
+      
+   } else {
+      msgCount++;
+   }
+}
+
+function blinkFunc() {
+   
+   // Blink 5 times
+   if (blinkCount < 6) {
+      if(blinkFlg == 0) {
+         messageLabel.innerHTML = message;
+         blinkFlg = 1;
+         blinkCount++;
+      } else {
+         messageLabel.innerHTML = "";
+         blinkFlg = 0;
+      }
+   } else {
+      // Stop Timer
+      clearInterval(timer2);
+   }
+}
+
+
+timer1 = setInterval("textFunc()", 150); // Every 150 milliseconds
+  </SCRIPT>
+    <center>
+        <font color="#000000">
+           <p>a Reserva de la Biosfera Mariposa Monarca se localiza al oriente del estado de Michoacán en los límites<br>
+            con el poniente del estado de México; abarca los municipios de Temascalcingo, San Felipe del Progreso,<br> 
+            Donato Guerra y Villa de Allende en el estado de México, y Contepec, Senguío, Angangueo, Ocampo, Zitácuaro,<br>
+             y Aporo en el estado de Michoacán.<br>
+           
+           Los Santuarios de la Monarca, considerados entre las cuatro bellezas naturales reconocidas por<br>
+            la UNESCO como Patrimonio de la Humanidad en suelo nacional, estarán abiertos al público de noviembre<br>
+            a marzo del siguiente año.<br>
+           En el Estado de México visita el Parador Turístico El Capulín y Macheros y Parador Turístico La<br>
+            Mesa, mientras que por Michoacán lo harán Parador Turístico El Rosario, Centro de Cultura para la<br>
+            Conservación Sierra Chincua y Parador Turístico Senguio.<br>
+           Todos los paraderos turísticos cuentan con servicio de sanitarios, venta de comida tradicional y antojitos, artesanías,<br> recorridos a pie, en caballo y bicicleta, deportes extremos como tirolesa.<br>
+           
+           Para llegar a las regiones de la Reserva Monarca desde la Ciudad de México se puede ir por Toluca y se<br>
+            toma la autopista a Guadalajara. En Maravatío se desvían hacia Angangueo, y a una media hora se llega al<br> 
+            santuario del Rosario y de Sierra Chincua.<br>
+           Otra opción por visitar es Angangueo, a 150 kilómetros al oeste del Distrito Federal. Se llega desde Toluca y Valle de Bravo, en<br> el estado de México, o desde Zitácuaro o Morelia, en Michoacán.<br>
+           
+           En promedio el acceso cuesta 35 pesos con guía, y para poder subir en un caballo, de ida y vuelta, el precio<br> 
+           oscila entre 80 y 100 pesos.<br>
+
+           ¡Cuida los santuarios!<br>
+
+        Cuando visites los santuarios de la Monarca ayuda a la economía local consumiendo productos de la región, <br>
+        comida y artesanías, elaborados por manos michoacanas y mexiquenses.<br>
+        Respeta las normas de la reserva, los propios ejidatarios les indicarán las recomendaciones para garantizar<br>
+         que las mariposas nos sigan visitando.<br>
+        Acude a los santuarios con la ayuda de un guía especializado.<br>
+        Acata las disposiciones de cada santuario, que son las mismas para todos.<br>
+        No traigas aparatos de sonido (grabadora, radio, etc.)<br>
+        No dejes basura, no hagas ruido y ven bien abrigado.<br>
+        Usa zapatos cómodos pues es zona montañosa.<br>
+        No te lleves mariposas, vivas o muertas, ¡está estrictamente prohibido!</p>
+           </center>
+
+</html>
